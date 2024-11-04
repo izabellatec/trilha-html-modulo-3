@@ -1,38 +1,275 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+    font-family: Arial, sans-serif;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
-.bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
+
+.logo {
+    text-align: center;
+    margin: 20px 0;
 }
+
+nav.bar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}
+
 .content {
-    max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
-    display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    display: flex;
+    margin: 20px;
 }
-.footer {
-    min-height: 100px;
-    border-top: solid 1px #cdcdcd;
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+    margin-right: 50px;
+}
+
+.dropdown {
+    margin-bottom: 10px;
+}
+
+.dropdown-button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 15px;
+}
+
+.dropdown-content {
+    display: none; /* Esconde o conteúdo inicialmente */
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+#Descricao-e-comportamento {
+    text-align: left;
+}
+
+#reproducao {
+    text-align: left;
+}
+
+#dentes {
+    text-align: left;
+}
+
+footer {
+    background-color: #1E90FF; /* Cor de fundo azul */
+    color: white; /* Cor do texto, você pode mudar conforme desejar */
+    padding: 70px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 20px;
+    margin: 0px;
+    
+}
+
+
+ 
+
+.logo {
+   text-align: left;
+   margin: 50px 0;
+  
+}
+
+nav.bar {
+   position: relative;
+   top: 20px; 
+   margin-left: 20px ;
+   background-color: #007bff;
+   color: white;
+   padding: 10px;
+   text-align: left;
+   width: 450px;
+   border-radius: 10px;
+   margin-top: 10px
+   
+}
+
+.content {
+   display: flex;
+   margin: 20px;
+   margin-right: 150px;
+}
+
+.sidebar {
+   width: 25%;
+   padding: 20px;
+   background-color: #f4f4f4;
+}
+
+.main {
+   flex: 1;
+   padding: 20px;
+   text-align: center;
+}
+
+.dropdown {
+   margin-bottom: 10px;
+}
+
+.dropdown-button {
+   background-color: #007bff;
+   color: white;
+   cursor: pointer;
+   padding: 10px;
+   border: none;
+   outline: none;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   font-size: 15px;
+}
+
+.dropdown-content {
+   display: none; /* Esconde o conteúdo inicialmente */
+   background-color: #f1f1f1;
+   padding: 10px;
+   border: 1px solid #ccc;
+}
+
+.dropdown-content a {
+   display: block;
+   color: #007bff;
+   text-decoration: none;
+   margin: 5px 0;
+}
+
+.dropdown-content a:hover {
+   text-decoration: underline;
 }
 .anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
+background-image: url('https://img.freepik.com/fotos-premium/fundo-azul-do-oceano-subaquatico-no-mar_87394-9541.jpg'); /* Substitua pelo caminho da sua imagem */
+background-size: cover; /* Faz com que a imagem cubra toda a área */
+background-position: center; /* Centraliza a imagem */
+padding: 20px; /* Espaçamento interno */
+border: 1px solid rgba(255, 255, 255, 0.3); /* Borda semi-transparente */
+border-radius: 5px; /* Bordas arredondadas */
+margin-bottom: 20px; /* Espaço abaixo da barra */
+position: relative; /* Necessário para o uso de pseudo-elemento */
+
 }
-.sidebar {
-    border-right: solid 1px #cdcdcd;
+
+.anchors::before {
+content: ''; /* Adiciona um elemento vazio */
+position: absolute; /* Posiciona absolutamente */
+top: 0; /* Começa no topo */
+left: 0; /* Começa à esquerda */
+right: 0; /* Se estende até a direita */
+bottom: 0; /* Se estende até o fundo */
+background-color:white(0, 0, 0, 0.6); /* Camada de fundo semi-transparente (ajuste a opacidade) */
+z-index: 0; /* Coloca atrás do conteúdo */
 }
-figure {
-    text-align: center;
+.anchors h2 {
+font-size: 30px; /* Tamanho da fonte do título */
+margin-bottom: 10px; /* Espaço abaixo do título */
+margin: 0;
+padding: 0;
+
+
 }
+
+.anchors ul {
+list-style-type: none; /* Remove os marcadores da lista */
+padding: 0; /* Remove o preenchimento padrão */
+
+}
+
+.anchors li {
+margin: 5px 0; /* Espaçamento entre os itens da lista */
+}
+
+.anchors a {
+text-decoration: none; /* Remove o sublinhado dos links */
+color: floralwhite; /* Cor dos links */
+font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.anchors a:hover {
+color: #0056b3; /* Cor dos links ao passar o mouse */
+
+}
+
+
+.anchors h2,
+.anchors ul {
+position: relative; /* Necessário para que o texto fique acima do fundo */
+z-index: 1; /* Coloca na frente da imagem de fundo */
+color:  white; /* Muda a cor do texto para branco */
+}
+
+.footer figure {
+margin: 0; /* Remove a margem padrão da figura */
+}
+
+.footer img {
+max-width: 100%; /* Garante que a imagem não ultrapasse a largura do rodapé */
+height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Opcional: Adiciona um espaçamento ao redor da imagem */
+.footer figure {
+margin: 20px 0; /* Espaçamento acima e abaixo da imagem */
+}
+
+.logo {
+    position: relative; /* Para posicionar o conteúdo interno */
+    width: 2000px;
+    height: 200px;
+    background-image: url('https://static.vecteezy.com/ti/fotos-gratis/p1/49717450-lindo-embaixo-da-agua-cenario-com-varios-tipos-do-peixe-e-coral-recifes-foto.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 1;
+}
+
+.logo img {
+    position: relative;
+    z-index: 2; /* Certifique-se de que o logo fica acima do fundo */
+   
+}
+   
+
+
